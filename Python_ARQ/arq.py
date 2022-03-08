@@ -216,6 +216,17 @@ class Arq:
             thumbsize=thumbsize,
         )
 
+
+    async def phdl(self, url: str):
+        """
+        Returns An Object.
+                Parameters:
+                        url (str): URL To Fetch
+                Returns:
+                        result object (str): Result
+        """
+        return await self._fetch("phdl", url=url)
+
     async def luna(self, query: str, id: int = 0):
         """
         Returns An Object.
